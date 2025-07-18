@@ -5,7 +5,7 @@ import Icon from "./Icon";
 
 const UsageAndIngredients = () => {
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 flex flex-col md:flex-row justify-between gap-10 md:gap-19 mt-8 mb-7">
+    <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-16 xl:px-18 flex flex-col md:flex-row justify-between gap-10 md:gap-20 mt-8 mb-7">
 
       {/* ===== Usage Instructions ===== */}
       <div className="flex flex-col gap-4 flex-1 min-w-[17.5rem] pl-1">

@@ -46,7 +46,7 @@ const Home = () => {
       <div className="w-full h-[11.25rem]  sm:h-[13.75rem]  md:h-[20rem] bg-[#DF674A]" />
 
       {/* Title */}
-      <h1 className="absolute top-4 sm:top-6 md:top-10 text-white text-2xl sm:text-[75px] font-ptserif">
+      <h1 className="absolute top-4 sm:top-6 md:top-10 text-white text-2xl sm:text-[4.6875rem] font-ptserif">
   Plumpy’Nut®
 </h1>
 
@@ -56,7 +56,7 @@ const Home = () => {
         <img
           src={ImgFirst}
           alt="Plumpy Nut"
-          className="w-[90vw] sm:w-[500px] md:w-[850px] object-contain"
+          className="w-[90vw] sm:w-[31.25rem] md:w-[53.125rem] object-contain"
         />
       </div>
 
@@ -71,10 +71,10 @@ const Home = () => {
       }`}
     >
       <button
-        className="flex justify-between items-center w-full sm:w-[350px] px-2 sm:px-4 py-3 text-gray-800 font-medium rounded-t-xl"
+        className="flex justify-between items-center w-full sm:w-[21.875rem] px-2 sm:px-4 py-3 text-gray-800 font-medium rounded-t-xl"
         onClick={toggleDropdown}
       >
-        <div className="border w-full sm:w-[392px] h-[47px] border-gray-200 rounded-full text-[15px] sm:text-[17px] bg-[#F3F0F6] flex justify-center gap-2 sm:gap-3 py-2 px-2 sm:px-4">
+        <div className="border w-full sm:w-[24.5rem] h-[2.9375rem] border-gray-200 rounded-full text-[1] sm:text-[1.0625rem] bg-[#F3F0F6] flex justify-center gap-2 sm:gap-3 py-2 px-2 sm:px-4">
 
              <DropCircle />
           <span className="truncate">Select Your Language</span>
@@ -85,7 +85,7 @@ const Home = () => {
       </button>
 
       {open && (
-        <ul className="divide-y divide-gray-200 max-h-[300px] overflow-y-auto">
+        <ul className="divide-y divide-gray-200 max-h-[18.75rem] overflow-y-auto">
           {languages.map((lang, index) => (
             <li
               key={index}
