@@ -2,9 +2,6 @@ import React from "react";
 import { FaCheck } from "react-icons/fa";
 import Icon from "./Icon";
 
-// Replace with actual image/logo if needed
-
-
 const NutritionInfo = () => {
   const macronutrients = [
     "Energy: 500 Kcal",
@@ -24,7 +21,7 @@ const NutritionInfo = () => {
     "Vitamin D: 15.6 Mg",
     "Vitamin E: 18.4 Mg",
     "Vitamin K: 27.6 Mg",
-    "VVitamin C: 82.8 Mg",
+    "Vitamin C: 82.8 Mg",
     "Vitamin B1 (Thiamine): 0.46 Mg",
     "Vitamin B2 (Riboflavin): 1.47 Mg",
     "Vitamin B3 (Niacin): 4.6 Mg",
@@ -50,39 +47,53 @@ const NutritionInfo = () => {
   ];
 
   return (
-    // ✅ One parent div — fully responsive
-    <div className="w-full px-6 sm:px-8 lg:px-19 py-10 mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-13 lg:gap-13  ">
+    <div className="w-full max-w-7xl px-4 sm:px-8 md:px-10 xl:px-14 py-10 mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-12">
 
         {/* Macronutrients */}
-        <div className="flex-1 flex flex-col gap-4 lg:pl-20">
-          <div className="flex items-center gap-3 text-[2rem] sm:text-[2.5rem] md:text-[3rem] font-ptserif text-gray-800 ">
-            <span className="pt-2"><Icon /></span>
+        <div className="flex flex-col gap-5">
+          <div className="flex items-center gap-3 text-gray-800 font-ptserif text-[clamp(1.75rem,2.5vw,3rem)]">
+            <span className="pt-1"><Icon /></span>
             <span>Plumpy’Nut®:</span>
           </div>
-          <div className="text-[1.2rem] sm:text-[1.5rem]">
+          <div className="text-[clamp(1.1rem,1.5vw,1.4rem)] ">
             Nutritional Values (Per 92g Sachet) Macronutrients
           </div>
-          {macronutrients.map((item, index) => (
-            <div key={index} className="flex items-start gap-2 text-base text-[1.2rem] sm:text-[1.3rem] md:text-[1.5rem] mt-1">
-              <div className="w-[1.75rem] h-[1.75rem] flex items-center justify-center mt-1 rounded-full bg-[#E15C3E] text-white">
-                <FaCheck size={11} />
-              </div>
-              <span className="font-inter">{item}</span>
-            </div>
-          ))}
+   {macronutrients.map((item, index) => {
+  const isChild = item.startsWith("Saturated Fat") || item.startsWith("Sugars");
+  return (
+    <div
+      key={index}
+      className={`flex items-start gap-3 text-[clamp(1rem,1.3vw,1.25rem)] ${
+        isChild ? "pl-8" : ""
+      }`}
+    >
+      <div
+        className={`${
+          isChild
+            ? "w-[0.85rem] h-[0.85rem] mt-2 rounded-full border-2 border-[#666666]"
+            : "min-w-[1.45rem] h-[1.45rem] flex items-center justify-center rounded-full bg-[#666666] mt-1"
+        }`}
+      ></div>
+      <span className="font-inter">{item}</span>
+    </div>
+  );
+})}
+
+   
+
         </div>
 
         {/* Vitamins */}
-        <div className="flex-1 flex flex-col gap-4">
-          <div className="flex items-center gap-3 text-[2rem] sm:text-[2.5rem] md:text-[3rem] font-ptserif text-gray-800">
+        <div className="flex flex-col gap-5">
+          <div className="flex items-center gap-3 text-gray-800 font-ptserif text-[clamp(1.75rem,2.5vw,3rem)]">
             <span className="pt-1"><Icon /></span>
             <span>Vitamins :</span>
           </div>
           {vitamins.map((item, index) => (
-            <div key={index} className="flex items-start gap-2 text-base text-[1.2rem] sm:text-[1.3rem] md:text-[1.5rem] mt-1">
-              <div className="w-[1.75rem] h-[1.75rem] flex items-center justify-center rounded-full bg-[#E15C3E] text-white mt-[4px] ml-1">
-                <FaCheck size={11} />
+            <div key={index} className="flex items-start gap-3 text-[clamp(1rem,1.3vw,1.25rem)]">
+              <div className="min-w-[1.45rem] h-[1.45rem] flex items-center justify-center rounded-full bg-[#666666] text-white mt-[6px] ml-2">
+                {/* <FaCheck size={12} /> */}
               </div>
               <span className="font-inter">{item}</span>
             </div>
@@ -90,20 +101,21 @@ const NutritionInfo = () => {
         </div>
 
         {/* Minerals */}
-        <div className="flex-1 flex flex-col gap-4">
-          <div className="flex items-center gap-3 text-[2rem] sm:text-[2.5rem] md:text-[3rem] font-ptserif text-gray-800">
+        <div className="flex flex-col gap-5">
+          <div className="flex items-center gap-3 text-gray-800 font-ptserif text-[clamp(1.75rem,2.5vw,3rem)]">
             <span className="pt-1"><Icon /></span>
             <span>Minerals:</span>
           </div>
           {minerals.map((item, index) => (
-            <div key={index} className="flex items-start gap-2 text-base text-[1.2rem] sm:text-[1.3rem] md:text-[1.5rem] mt-1 ml-1.5">
-              <div className="w-[1.75rem] h-[1.75rem] flex items-center justify-center rounded-full bg-[#E15C3E] text-white mt-[6px]">
-                <FaCheck size={11} />
+            <div key={index} className="flex items-start gap-3 text-[clamp(1rem,1.3vw,1.25rem)]">
+              <div className="min-w-[1.45rem] h-[1.45rem] flex items-center justify-center rounded-full bg-[#666666] text-white mt-[6px] ml-2">
+                {/* <FaCheck size={12} /> */}
               </div>
               <span className="font-inter">{item}</span>
             </div>
           ))}
         </div>
+
       </div>
     </div>
   );
