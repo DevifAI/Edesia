@@ -59,14 +59,29 @@ const NutritionInfo = () => {
           <div className="text-[clamp(1.1rem,1.5vw,1.4rem)] ">
             Nutritional Values (Per 92g Sachet) Macronutrients
           </div>
-          {macronutrients.map((item, index) => (
-            <div key={index} className="flex items-start gap-3 text-[clamp(1rem,1.3vw,1.25rem)]">
-              <div className="min-w-[1.75rem] h-[1.75rem] flex items-center justify-center rounded-full bg-[#E15C3E] text-white mt-1">
-                <FaCheck size={12} />
-              </div>
-              <span className="font-inter">{item}</span>
-            </div>
-          ))}
+   {macronutrients.map((item, index) => {
+  const isChild = item.startsWith("Saturated Fat") || item.startsWith("Sugars");
+  return (
+    <div
+      key={index}
+      className={`flex items-start gap-3 text-[clamp(1rem,1.3vw,1.25rem)] ${
+        isChild ? "pl-8" : ""
+      }`}
+    >
+      <div
+        className={`${
+          isChild
+            ? "w-[0.85rem] h-[0.85rem] mt-2 rounded-full border-2 border-[#666666]"
+            : "min-w-[1.45rem] h-[1.45rem] flex items-center justify-center rounded-full bg-[#666666] mt-1"
+        }`}
+      ></div>
+      <span className="font-inter">{item}</span>
+    </div>
+  );
+})}
+
+   
+
         </div>
 
         {/* Vitamins */}
@@ -77,8 +92,8 @@ const NutritionInfo = () => {
           </div>
           {vitamins.map((item, index) => (
             <div key={index} className="flex items-start gap-3 text-[clamp(1rem,1.3vw,1.25rem)]">
-              <div className="min-w-[1.75rem] h-[1.75rem] flex items-center justify-center rounded-full bg-[#E15C3E] text-white mt-[6px] ml-2">
-                <FaCheck size={12} />
+              <div className="min-w-[1.45rem] h-[1.45rem] flex items-center justify-center rounded-full bg-[#666666] text-white mt-[6px] ml-2">
+                {/* <FaCheck size={12} /> */}
               </div>
               <span className="font-inter">{item}</span>
             </div>
@@ -93,8 +108,8 @@ const NutritionInfo = () => {
           </div>
           {minerals.map((item, index) => (
             <div key={index} className="flex items-start gap-3 text-[clamp(1rem,1.3vw,1.25rem)]">
-              <div className="min-w-[1.75rem] h-[1.75rem] flex items-center justify-center rounded-full bg-[#E15C3E] text-white mt-[6px] ml-2">
-                <FaCheck size={12} />
+              <div className="min-w-[1.45rem] h-[1.45rem] flex items-center justify-center rounded-full bg-[#666666] text-white mt-[6px] ml-2">
+                {/* <FaCheck size={12} /> */}
               </div>
               <span className="font-inter">{item}</span>
             </div>
