@@ -1,5 +1,8 @@
-@import "tailwindcss";
+/* @import "tailwindcss"; */
 
-body {
-  font-family: 'PT Serif', serif;
-}
+/* @font-face {
+  font-family: 'New Spirit';
+  src: url('./assets/fonnts.com-New-Spirit-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+} */

@@ -1,6 +1,6 @@
 import React from 'react'
 import Home from './Components/Home';
-import '@fontsource/pt-serif';
+
 const App = () => {
   return (
     <div>

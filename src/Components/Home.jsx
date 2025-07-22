@@ -46,7 +46,7 @@ const Home = () => {
       <div className="w-full h-[11.25rem]  sm:h-[13.75rem]  md:h-[20rem] bg-[#DF674A]" />
 
       {/* Title */}
-      <h1 className="absolute top-4 sm:top-6 md:top-10 text-white text-2xl sm:text-[4.6875rem] font-ptserif">
+      <h1  className=" absolute top-4 sm:top-6 md:top-10 text-white text-2xl sm:text-[4.6875rem] font-newSpirit ">
   Plumpy’Nut®
 </h1>
 
@@ -107,6 +107,7 @@ const Home = () => {
         <div className="w-[100%] sm:mt-40 lg:mt-56 flex flex-col gap-5 ">
           <AudioPlayer />
           <TherapeuticFoodDescription />
+          
 
           <div className="w-[93%] h-[1px] sm:h-[1px] md:h-[1px]  bg-gray-300 ml-10 mt-20" />
 
@@ -117,7 +118,7 @@ const Home = () => {
           {/* ======= Macronutrients + Vitamins Section+Minerals Section ======= */}
           <NutritionInfo />
 
-          <div className="w-full bg-[#E15C3E] text-white">
+          <div className="w-full bg-[#E15C3E] text-white mt-13">
             <h1 className="text-center font-ptserif text-lg sm:text-xl md:text-2xl py-3">
               Plumpy’Nut®
             </h1>

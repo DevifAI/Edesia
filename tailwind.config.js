@@ -1,13 +1,11 @@
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.js
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}", // Adjust as needed
-  ],
+  content: ["./src/*.{js,jsx,ts,tsx,css}"],
+
   theme: {
     extend: {
       fontFamily: {
-        ptserif: ['"PT Serif"', 'serif'],
-         inter: ['Inter', 'sans-serif'],
+        newSpirit: ['"New Spirit"', 'serif'],
       },
     },
   },

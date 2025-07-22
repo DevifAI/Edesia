@@ -4,7 +4,7 @@ import Icon from "./Icon";
 
 const UsageAndIngredients = () => {
   return (
-<div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-10   grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-12 sm:gap-x-14 lg:gap-x-20">
+<div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-24 xl:px-16 2xl:px-20 py-10   grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-12 sm:gap-x-14 lg:gap-x-20">
 
   {/* ===== Usage Instructions ===== */}
   <div className="flex flex-col gap-5 min-w-[16rem]">
@@ -32,7 +32,7 @@ const UsageAndIngredients = () => {
             <AiOutlineClose className="text-[#E15C3E] text-lg mt-[3px]" />
           )}
           {(idx >= 2 && idx <= 4) && (
-            <IoCheckmarkSharp className="text-blue-500 text-lg mt-[3px]" />
+            <IoCheckmarkSharp className="text-blue-500 text-lg mt-[3px] " />
           )}
         </span>
       </div>
