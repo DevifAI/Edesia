@@ -1,4 +1,52 @@
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  @keyframes bar1 {
+    0%,
+    100% {
+      height: 20%;
+    }
+    50% {
+      height: 100%;
+    }
+  }
+
+  @keyframes bar2 {
+    0%,
+    100% {
+      height: 30%;
+    }
+    50% {
+      height: 80%;
+    }
+  }
+
+  @keyframes bar3 {
+    0%,
+    100% {
+      height: 10%;
+    }
+    50% {
+      height: 90%;
+    }
+  }
+
+  .animate-bar1 {
+    animation: bar1 1s infinite ease-in-out;
+  }
+
+  .animate-bar2 {
+    animation: bar2 1s infinite ease-in-out;
+  }
+
+  .animate-bar3 {
+    animation: bar3 1s infinite ease-in-out;
+  }
+}
+
 /* @tailwind base; 
 @tailwind utilities;
 @tailwind components; 
@@ -15,4 +63,4 @@
 
 /* body {
   @apply font-newSpirit;
-} */ 
+} */
