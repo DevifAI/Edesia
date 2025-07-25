@@ -13,7 +13,7 @@
     "@fontsource/inter": "^5.2.6",
     "@fontsource/pt-serif": "^5.2.6",
     "@tailwindcss/vite": "^4.1.11",
-    "axios": "^1.11.0",
+    "axios": "^0.27.2",
     "fs-extra": "^11.3.0",
     "google-translate-api-x": "^10.7.2",
     "i18next": "^25.3.2",
