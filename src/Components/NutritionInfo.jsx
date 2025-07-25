@@ -47,7 +47,7 @@ const NutritionInfo = () => {
   ];
 
   return (
-    <div className="w-full max-w-7xl px-4 sm:px-8 md:px-10 xl:px-14 py-10 mx-auto">
+    <div className="w-full max-w-7xl px-4 sm:px-8 md:px-10 xl:px-14 py-12 mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-12">
 
         {/* Macronutrients */}
@@ -86,16 +86,16 @@ const NutritionInfo = () => {
 
         {/* Vitamins */}
         <div className="flex flex-col gap-5">
-          <div className="flex items-center gap-3 text-gray-800 font-ptserif text-[clamp(1.75rem,2.5vw,3rem)]">
+          <div className="flex items-center gap-3  text-gray-800 font-ptserif text-[clamp(1.75rem,2.5vw,3rem)]">
             <span className="pt-1"><Icon /></span>
             <span>Vitamins :</span>
           </div>
           {vitamins.map((item, index) => (
-            <div key={index} className="flex items-start gap-3 text-[clamp(1rem,1.3vw,1.25rem)]">
+            <div key={index} className="flex items-start gap-3 text-[clamp(1rem,1.3vw,1.25rem)] ">
               <div className="min-w-[1.45rem] h-[1.45rem] flex items-center justify-center rounded-full bg-[#666666] text-white mt-[6px] ml-2">
                 {/* <FaCheck size={12} /> */}
               </div>
-              <span className="font-inter">{item}</span>
+              <span className="font-inter ">{item}</span>
             </div>
           ))}
         </div>

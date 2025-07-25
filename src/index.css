@@ -1,1 +1,18 @@
-@import "tailwindcss"
+@import "tailwindcss";
+/* @tailwind base; 
+@tailwind utilities;
+@tailwind components; 
+
+
+/* /*  */
+
+/* @font-face {
+  font-family: 'New Spirit';
+  src: url('/fonts/NewSpirit-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+} */
+
+/* body {
+  @apply font-newSpirit;
+} */ 
